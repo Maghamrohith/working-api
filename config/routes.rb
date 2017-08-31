@@ -4,7 +4,12 @@ Rails.application.routes.draw do
   get 'gender/determine'
 get 'google/address'
   get 'weather/search'
-
+namespace :api, format: 'json' do
+  namespace :v1 do
+    resources :categories
+    resources :products
+  end
+end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
