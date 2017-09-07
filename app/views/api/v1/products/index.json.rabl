@@ -1,5 +1,5 @@
 collection @products
-attributes :name, :price
+attributes :id, :name, :price
 
 child :category do
   attributes :name

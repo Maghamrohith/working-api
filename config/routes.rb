@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'dashboard/index'
+
+  devise_for :users
   get 'google/distance'
 
   get 'gender/determine'
@@ -8,6 +11,9 @@ namespace :api, format: 'json' do
   namespace :v1 do
     resources :categories
     resources :products
+  end
+ namespace :v2 do
+   resources :tasks
   end
 end
   # The priority is based upon order of creation: first created -> highest priority.
